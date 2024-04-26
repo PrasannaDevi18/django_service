@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the content */
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px; /* Add some space below the image */
+        }
+         /* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px; /* Increased margin */
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555; /* Darken background color on hover */
+}
+
+.navbar ul li.active a {
+    background-color: #555; /* Dark background for active link */
+}
+
+.navbar ul li a:hover {
+    color: #ddd; /* Lighten text color on hover */
+}
+    </style>
+</head>
+<body>
+
+
+<div class="navbar">
+        <ul>
+<!--            <li><a href="home.html">Home</a></li>-->
+            <li><a href="About_Us.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="home.html">Sign Out</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>About Us</h2>
+         <img src="{% static 'images/Home cleaning.jpg' %}" alt="About Us Image">
+        <p> Welcome to Service Management System ! We are your trusted platform for efficient and reliable plumbing and house cleaning services. At Service Management System , we understand the importance of a well-maintained home, and we're dedicated to providing you with top-notch professionals to meet your needs.Our platform connects you with experienced and vetted service providers who specialize in plumbing and house cleaning, ensuring that you receive the highest quality of service every time. With [Service Management System Name], booking a service is quick and easy. Our user-friendly interface and transparent pricing make the entire process hassle-free, so you can focus on what matters most.</p>
+    </div>
+</body>
+</html>

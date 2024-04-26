@@ -1,0 +1,200 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Login</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            background-color: #f0f8ff; /* Light blue background */-->
+<!--            color: #000; /* Black text color */-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            width: 400px;-->
+<!--            margin: 50px auto;-->
+<!--            background-color: #fff; /* White container background */-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 0 10px rgba(70, 130, 180, 0.3); /* Light blue box shadow */-->
+<!--            padding: 40px;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+
+<!--        h2 {-->
+<!--            text-align: center;-->
+<!--            color: #333333; /* Dark text color */-->
+<!--            margin-bottom: 30px;-->
+<!--        }-->
+
+<!--        label {-->
+<!--            display: block;-->
+<!--            margin-bottom: 10px;-->
+<!--            font-weight: bold;-->
+<!--            color: #555555; /* Gray text color */-->
+<!--        }-->
+
+<!--        input[type="text"],-->
+<!--        input[type="password"] {-->
+<!--            width: 100%;-->
+<!--            padding: 12px 20px;-->
+<!--            margin: 8px 0;-->
+<!--            border: 1px solid #cccccc; /* Light gray border */-->
+<!--            border-radius: 4px;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+
+<!--        button[type="submit"] {-->
+<!--            width: 100%;-->
+<!--            padding: 14px 20px;-->
+<!--            background-color: #4169e1; /* Royal blue button background */-->
+<!--            color: #fff; /* White text color */-->
+<!--            border: none;-->
+<!--            border-radius: 4px;-->
+<!--            cursor: pointer;-->
+<!--            font-size: 16px;-->
+<!--            transition: background-color 0.3s;-->
+<!--        }-->
+
+<!--        button[type="submit"]:hover {-->
+<!--            background-color: #6495ed; /* Darker blue on hover */-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h2>Login</h2>-->
+<!--        <form id="loginForm" method="post">-->
+<!--            {% csrf_token %}-->
+<!--            <label for="id_username_or_email">Username or Email:</label>-->
+<!--            <input type="text" id="id_username_or_email" name="username_or_email" required>-->
+<!--            <label for="id_password">Password:</label>-->
+<!--            <input type="password" id="id_password" name="password" required>-->
+<!--            <button type="submit">Login</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        document.getElementById("loginForm").addEventListener("submit", function(event) {-->
+<!--            event.preventDefault(); // Prevent the form from submitting normally-->
+
+<!--            // Your AJAX or form submission logic here-->
+
+<!--            // Simulate successful login (remove this line in production)-->
+<!--            var loggedIn = true;-->
+
+<!--            // Check if login was successful-->
+<!--            if (loggedIn) {-->
+<!--                // Redirect the user to service.html after successful login-->
+<!--                window.location.href = "service.html";-->
+<!--            } else {-->
+<!--                // Handle login failure-->
+<!--                alert("Login failed. Please try again.");-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #000; /* Black text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff; /* White container background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(70, 130, 180, 0.3); /* Light blue box shadow */
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333; /* Dark text color */
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555555; /* Gray text color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #cccccc; /* Light gray border */
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 14px 20px;
+            background-color: #4169e1; /* Royal blue button background */
+            color: #fff; /* White text color */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #6495ed; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" method="post">
+            {% csrf_token %}
+            <label for="id_username_or_email">Username or Email:</label>
+            <input type="text" id="id_username_or_email" name="username_or_email" required>
+            <label for="id_password">Password:</label>
+            <input type="password" id="id_password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Your AJAX or form submission logic here
+
+            // Simulate successful login (remove this line in production)
+            var loggedIn = true;
+
+            // Check if login was successful
+            if (loggedIn) {
+                // Redirect the user to service.html after successful login
+                window.location.href = "service.html";
+            } else {
+                // Handle login failure
+                alert("Login failed. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

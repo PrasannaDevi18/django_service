@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Management System</title>
+    <style>
+        /* CSS styles for navbar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed; /* Fix navbar at the top */
+            width: 100%; /* Make navbar span the full width */
+            top: 0; /* Align navbar at the top */
+            z-index: 1000; /* Ensure navbar is on top of other content */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* CSS styles for header */
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px; /* Adjust margin to accommodate fixed navbar */
+        }
+
+        header h1 {
+            margin-bottom: 10px; /* Add space below the heading */
+        }
+
+        header p {
+            margin-bottom: 20px; /* Add space below the paragraph */
+        }
+
+        /* CSS styles for main content */
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %} <!-- Include navbar template -->
+
+    {% block content %}{% endblock %} <!-- Placeholder for content -->
+
+    <!-- Add your JavaScript links here -->
+</body>
+</html>
+
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <h1>Welcome to the Service Management System</h1>
+    <p>A platform to manage service requests efficiently.</p>
+</header>
+
+<!-- Add specific content for the home page -->
+<main>
+    <!-- Add content for the home section here -->
+</main>
+{% endblock %}

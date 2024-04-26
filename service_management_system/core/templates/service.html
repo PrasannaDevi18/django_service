@@ -1,0 +1,372 @@
+<!--{% load static %}-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Service Page</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
+<!--            background-color: #f5f5f5;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            max-width: 1100px;-->
+<!--            margin: 50px auto;-->
+<!--            padding: 20px;-->
+<!--            background-color: #fff;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);-->
+<!--        }-->
+
+<!--        h2 {-->
+<!--            color: #333;-->
+<!--            text-align: center;-->
+<!--            margin-bottom: 30px;-->
+<!--            font-size: 36px;-->
+<!--        }-->
+
+<!--        p {-->
+<!--            color: #555;-->
+<!--            text-align: center;-->
+<!--            margin-bottom: 40px;-->
+<!--            font-size: 20px;-->
+<!--        }-->
+
+<!--        /* Example styles for service cards */-->
+<!--        .service-cards {-->
+<!--            display: flex;-->
+<!--            flex-wrap: wrap;-->
+<!--            justify-content: space-between;-->
+<!--        }-->
+
+<!--        .service-card {-->
+<!--            width: calc(50% - 20px); /* Adjusted width calculation */-->
+<!--            background-color: #fff;-->
+<!--            border-radius: 12px;-->
+<!--            padding: 20px;-->
+<!--            margin-bottom: 20px;-->
+<!--            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);-->
+<!--            transition: transform 0.3s, box-shadow 0.3s;-->
+<!--        }-->
+
+<!--        .service-card:hover {-->
+<!--            transform: translateY(-5px);-->
+<!--            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);-->
+<!--        }-->
+
+<!--        .service-card h3 {-->
+<!--            color: #333;-->
+<!--            font-size: 24px;-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+
+<!--        .service-card p {-->
+<!--            color: #666;-->
+<!--            font-size: 18px;-->
+<!--            line-height: 1.5;-->
+<!--        }-->
+
+<!--        /* Style for service images */-->
+<!--        .service-image {-->
+<!--            max-width: 100%;-->
+<!--            height: auto;-->
+<!--            border-radius: 12px;-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+
+<!--        /* Service catalog */-->
+<!--        .service-catalog {-->
+<!--            text-align: center;-->
+<!--            margin-bottom: 20px;-->
+<!--            font-size: 20px;-->
+<!--            cursor: pointer;-->
+<!--            transition: transform 0.3s;-->
+<!--        }-->
+
+<!--        .service-catalog:hover {-->
+<!--            transform: scale(1.05);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h2>Our Services</h2>-->
+<!--        <p>Explore our range of services below.</p>-->
+
+<!--        &lt;!&ndash; Example service cards &ndash;&gt;-->
+<!--        <div class="service-cards">-->
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Health care service.jpg' %}" alt="Health care service" class="service-image">-->
+<!--                <h3>Health care service</h3>-->
+<!--                <p> Click to book for Health care service</p>-->
+<!--            </div>-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Home cleaning.jpg' %}" alt="Home cleaning" class="service-image">-->
+<!--                <h3>Home cleaning</h3>-->
+<!--                <p>Click to book for Home cleaning</p>-->
+<!--            </div>-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Drain cleaning.jpg' %}" alt="Drain cleaning" class="service-image">-->
+<!--                <h3>Drain cleaning</h3>-->
+<!--                <p>Click to book for Drain cleaning</p>-->
+<!--            </div>-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Furniture service.jpg' %}" alt="Furniture service" class="service-image">-->
+<!--                <h3>Furniture service</h3>-->
+<!--                <p>Click to book for Furniture service</p>-->
+<!--            </div>-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Home beauty service.jpg' %}" alt="Home beauty service" class="service-image">-->
+<!--                <h3>Home beauty service</h3>-->
+<!--                <p>Click to book for Home beauty service</p>-->
+<!--            </div>-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Leak detection.jpg' %}" alt="Leak detection" class="service-image">-->
+<!--                <h3>Leak detection</h3>-->
+<!--                <p>Click to book for Leak detection</p>-->
+<!--            </div>-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Planting service.jpg' %}" alt="Planting service" class="service-image">-->
+<!--                <h3>Planting service</h3>-->
+<!--                <p> Click to book for Planting service</p>-->
+<!--            </div>-->
+
+<!--&lt;!&ndash;            <div class="service-card">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img src="{% static 'images/Plumbing services.jpg' %}" alt="Plumbing services" class="service-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h3>Plumbing services</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>Our professional cleaning services ensure your home is spotless. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--            <div class="service-card">-->
+<!--                <img src="{% static 'images/Water heater services.jpg' %}" alt="Water heater services" class="service-image">-->
+<!--                <h3>Water heater services</h3>-->
+<!--                <p>Click to book for Heater services</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Add more service cards as needed &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Service catalog &ndash;&gt;-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        p {
+            color: #555;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+        /* Example styles for service cards */
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Style for service images */
+        .service-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Service catalog */
+        .service-catalog {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .service-catalog:hover {
+            transform: scale(1.05);
+        }
+        /* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px; /* Increased margin */
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555; /* Darken background color on hover */
+}
+
+.navbar ul li.active a {
+    background-color: #555; /* Dark background for active link */
+}
+
+.navbar ul li a:hover {
+    color: #ddd; /* Lighten text color on hover */
+}
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+        <ul>
+<!--            <li><a href="home.html">Home</a></li>-->
+            <li><a href="About_Us.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="home.html">Sign Out</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Our Services</h2>
+        <p>Explore our range of services below.</p>
+
+        <!-- Example service cards -->
+         <a href="booking_page.html">
+             <div class="service-cards">
+            <div class="service-card">
+                <img src="{% static 'images/Health care service.jpg' %}" alt="Health care service" class="service-image">
+                <h3>Health care service</h3>
+                <p>We provide comprehensive health care services. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+             <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Home cleaning.jpg' %}" alt="Home cleaning" class="service-image">
+                <h3>Home cleaning</h3>
+                <p>Our professional cleaning services ensure your home is spotless. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+             <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Drain cleaning.jpg' %}" alt="Drain cleaning" class="service-image">
+                <h3>Drain cleaning</h3>
+                <p>Our drain cleaning services keep your drains clear and functional. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+             <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Furniture service.jpg' %}" alt="Furniture service" class="service-image">
+                <h3>Furniture service</h3>
+                <p>Revamp your furniture with our professional furniture services. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+             <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Home beauty service.jpg' %}" alt="Home beauty service" class="service-image">
+                <h3>Home beauty service</h3>
+                <p>Pamper yourself with our home beauty services. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+             <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Leak detection.jpg' %}" alt="Leak detection" class="service-image">
+                <h3>Leak detection</h3>
+                <p>Identify and fix leaks in your home with our leak detection services. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Planting service.jpg' %}" alt="Planting service" class="service-image">
+                <h3>Planting service</h3>
+                <p>Add greenery to your surroundings with our professional planting services. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+             <a href="booking_page.html">
+                 <div class="service-card">
+                <img src="{% static 'images/Water heater services.jpg' %}" alt="Water heater services" class="service-image">
+                <h3>Water heater services</h3>
+                <p>Ensure your water heater is running
+

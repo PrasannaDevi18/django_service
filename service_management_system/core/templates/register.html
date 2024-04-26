@@ -1,0 +1,266 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>User Registration</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
+<!--            background-color: #f5f5f5;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            max-width: 400px;-->
+<!--            margin: 50px auto;-->
+<!--            background-color: #fff;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);-->
+<!--            padding: 40px;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+
+<!--        h2 {-->
+<!--            text-align: center;-->
+<!--            color: #333;-->
+<!--            margin-bottom: 30px;-->
+<!--            font-size: 24px;-->
+<!--        }-->
+
+<!--        form {-->
+<!--            width: 100%;-->
+<!--        }-->
+
+<!--        label {-->
+<!--            display: block;-->
+<!--            margin-bottom: 10px;-->
+<!--            font-weight: bold;-->
+<!--            color: #555;-->
+<!--        }-->
+
+<!--        input[type="text"],-->
+<!--        input[type="email"],-->
+<!--        input[type="password"] {-->
+<!--            width: 100%;-->
+<!--            padding: 12px;-->
+<!--            margin: 8px 0;-->
+<!--            border: 1px solid #ccc;-->
+<!--            border-radius: 4px;-->
+<!--            box-sizing: border-box;-->
+<!--            transition: border-color 0.3s ease;-->
+<!--            font-size: 16px;-->
+<!--        }-->
+
+<!--        input[type="text"]:focus,-->
+<!--        input[type="email"]:focus,-->
+<!--        input[type="password"]:focus {-->
+<!--            border-color: #007bff;-->
+<!--            outline: none;-->
+<!--        }-->
+
+<!--        button[type="submit"] {-->
+<!--            width: 100%;-->
+<!--            padding: 14px;-->
+<!--            background-color: #007bff;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            border-radius: 4px;-->
+<!--            cursor: pointer;-->
+<!--            font-size: 16px;-->
+<!--            transition: background-color 0.3s;-->
+<!--        }-->
+
+<!--        button[type="submit"]:hover {-->
+<!--            background-color: #0056b3;-->
+<!--        }-->
+
+<!--        .notification {-->
+<!--            display: none;-->
+<!--            background-color: #4CAF50;-->
+<!--            color: white;-->
+<!--            text-align: center;-->
+<!--            padding: 10px;-->
+<!--            margin-top: 20px;-->
+<!--            border-radius: 5px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h2>User Registration</h2>-->
+<!--        <form id="registration-form" action="#" method="post">-->
+<!--            {% csrf_token %}-->
+<!--            <label for="username">Username:</label>-->
+<!--            <input type="text" id="username" name="username" placeholder="Enter your username" required>-->
+<!--            <label for="email">Email:</label>-->
+<!--            <input type="email" id="email" name="email" placeholder="Enter your email address" required>-->
+<!--            <label for="password">Password:</label>-->
+<!--            <input type="password" id="password" name="password" placeholder="Enter your password" required>-->
+<!--            <button type="submit">Register</button>-->
+<!--        </form>-->
+<!--        <div id="notification" class="notification"></div>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        document.getElementById('registration-form').addEventListener('submit', function(event) {-->
+<!--            event.preventDefault(); // Prevent form submission-->
+
+<!--            // Perform registration process (send data to server, etc.)-->
+<!--            // For demonstration, just display the notification-->
+<!--            var notification = document.getElementById('notification');-->
+<!--            notification.innerText = 'Registration successful!';-->
+<!--            notification.style.display = 'block';-->
+
+<!--            // Optional: Clear form fields after registration-->
+<!--            document.getElementById('registration-form').reset();-->
+<!--        });-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .notification {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        #login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        #login-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form id="registration-form" action="#" method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Register</button>
+        </form>
+        <div id="notification" class="notification"></div>
+        <button id="login-btn" onclick="location.href='/login'" disabled>Login</button>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Perform registration process (send data to server, etc.)
+            // For demonstration, just display the notification
+            var notification = document.getElementById('notification');
+            notification.innerText = 'Registration successful!';
+            notification.style.display = 'block';
+
+            // Enable login button
+            document.getElementById('login-btn').removeAttribute('disabled');
+            document.getElementById('login-btn').style.cursor = 'pointer';
+
+            // Optional: Clear form fields after registration
+            document.getElementById('registration-form').reset();
+        });
+    </script>
+</body>
+</html>

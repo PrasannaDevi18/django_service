@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Service Catalog</h2>
+        <h3>Home Services</h3>
+        <ul>
+            {% for service in home_services %}
+                <li>{{ service.name }} - {{ service.description }}</li>
+                <!-- Add more details as needed -->
+            {% empty %}
+                <li>No home services available.</li>
+            {% endfor %}
+        </ul>
+        <h3>All Services</h3>
+        <ul>
+            {% for service in service_list %}
+                <li>{{ service.name }} - {{ service.description }}</li>
+                <!-- Add more details as needed -->
+            {% empty %}
+                <li>No services available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
